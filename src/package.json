@@ -1,0 +1,23 @@
+{
+  "name": "statistica",
+  "version": "1.0.0",
+  "description": "Statistical Analysis Tool - All-in-one for researchers & practitioners",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . Statistica --platform=win32 --arch=x64 --out=dist --overwrite --prune=true --asar=true",
+    "build-all": "electron-packager . Statistica --platform=win32 --arch=x64 --out=dist --overwrite --prune=true --asar=true --icon=icon.ico"
+  },
+  "keywords": ["statistics", "analysis", "psychometrics", "factor-analysis", "SEM", "IRT"],
+  "author": "VeryCoolApps",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "electron": "^42.1.0",
+    "electron-packager": "^17.1.2",
+    "file-saver": "^2.0.5",
+    "jstat": "^1.9.6",
+    "papaparse": "^5.5.3",
+    "plotly.js-dist-min": "^3.5.1"
+  }
+}

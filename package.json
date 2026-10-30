@@ -1,0 +1,37 @@
+{
+  "name": "statistica",
+  "version": "1.0.0",
+  "description": "All-in-one offline statistical analysis desktop app — Bilingual (ID/EN) | Electron + Chart.js + Plotly",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron src/main.js",
+    "build:win": "electron-packager src Statistica --platform=win32 --arch=x64 --out=dist --overwrite --prune=true --asar=true",
+    "build:mac": "electron-packager src Statistica --platform=darwin --arch=x64 --out=dist --overwrite --prune=true --asar=true",
+    "build:linux": "electron-packager src Statistica --platform=linux --arch=x64 --out=dist --overwrite --prune=true --asar=true",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "statistics", "analysis", "psychometrics", "factor-analysis", "SEM", "IRT",
+    "electron", "offline", "bilingual", "chart", "data-science", "research"
+  ],
+  "author": "VeryCoolApps — PT. Agra Karya Digital",
+  "license": "MIT",
+  "homepage": "https://github.com/verycoolapps/Statistica",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/verycoolapps/Statistica.git"
+  },
+  "bugs": {
+    "url": "https://github.com/verycoolapps/Statistica/issues"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "electron": "^42.1.0",
+    "electron-packager": "^17.1.2",
+    "file-saver": "^2.0.5",
+    "jstat": "^1.9.6",
+    "papaparse": "^5.5.3",
+    "plotly.js-dist-min": "^3.5.1"
+  },
+  "devDependencies": {}
+}

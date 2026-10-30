@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistica</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="../node_modules/chart.js/dist/chart.umd.js"></script>
+<script src="../node_modules/jstat/dist/jstat.js"></script>
+</head>
+<body>
+
+<div id="splash" class="splash">
+  <h1>Statistica</h1>
+  <p>Statistical Analysis Tool</p>
+  <div class="loader"></div>
+</div>
+
+<div class="app-container">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h1 id="app-title">Statistica</h1>
+      <div class="sub" id="app-sub">Statistical Analysis Tool</div>
+      <div class="sidebar-lang">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="id">ID</button>
+      </div>
+    </div>
+    <div class="sidebar-menu" id="sidebar-menu"></div>
+    <div class="sidebar-footer"><span>&copy; 2026 VeryCoolApps &mdash; PT. Agra Karya Digital</span></div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="title-area">
+        <span id="toolbar-title">Statistica</span>
+        <span class="subtitle" id="toolbar-subtitle"></span>
+      </div>
+      <div class="toolbar-actions">
+        <button class="tb-btn" id="btn-export" data-i18n-btn="export_zip" title="Export All">📦</button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Workspace -->
+      <div class="workspace">
+        <!-- Welcome -->
+        <div class="welcome" id="welcome-area">
+          <div class="welcome-icon">📊</div>
+          <h2>Statistica</h2>
+          <p>Statistical Analysis Tool for Researchers &amp; Practitioners</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><h4 data-i18n="upload">Upload CSV</h4><p>Load your data file</p></div>
+            <div class="step"><div class="step-num">2</div><h4 data-i18n="select_var">Select Analysis</h4><p>Choose from the menu</p></div>
+            <div class="step"><div class="step-num">3</div><h4 data-i18n="run">Run Analysis</h4><p>Get results &amp; charts</p></div>
+          </div>
+        </div>
+
+        <!-- Analysis View -->
+        <div class="analysis-view hidden" id="analysis-view">
+          <div class="analysis-desc" id="analysis-desc"></div>
+          <div class="result-area">
+            <div class="result-tabs">
+              <div class="result-tab active" data-tab="summary">📋 <span data-i18n-dp="results">Results</span></div>
+              <div class="result-tab" data-tab="chart">📈 <span data-i18n-dp="chart">Charts</span></div>
+            </div>
+            <div class="result-body" id="result-summary"></div>
+            <div class="result-body" id="result-chart" style="display:none"><div id="chart-output"></div></div>
+          </div>
+          <div id="analysis-form"></div>
+        </div>
+      </div>
+
+      <!-- Data Panel -->
+      <div class="data-panel hidden" id="data-panel">
+        <div class="data-panel-header">
+          <span id="data-panel-title">Data Preview</span>
+          <span class="close" id="close-data-panel">✕</span>
+        </div>
+        <div class="data-panel-content">
+          <div class="drop-zone" id="drop-zone">
+            <div class="dz-icon">📂</div>
+            <p data-i18n-dp="upload_desc">Drag &amp; drop CSV file here or click to select</p>
+            <button class="dz-btn" data-i18n-btn="upload_btn">Select CSV File</button>
+          </div>
+          <div class="data-info" id="data-info"></div>
+          <div id="data-preview"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
